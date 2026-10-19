@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7fb;
+    color: #333;
+}
+
+/* Header */
+.site-header {
+    background-color: #2563eb;
+    color: white;
+    padding: 20px;
+}
+
+.navbar {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 80px 20px;
+    background-color: white;
+}
+
+.weather-card {
+    position: absolute;
+    top: 18px;
+    right: max(20px, calc((100% - 1000px) / 2));
+    width: 220px;
+    padding: 14px 16px;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    background: #eff6ff;
+    color: #1e3a8a;
+    text-align: left;
+    box-shadow: 0 4px 14px rgba(30, 58, 138, 0.08);
+}
+
+.weather-heading {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #1e40af;
+}
+
+.weather-current {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.weather-current img {
+    width: 48px;
+    height: 48px;
+}
+
+.weather-temperature {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.weather-description,
+.weather-status {
+    font-size: 0.85rem;
+    text-transform: capitalize;
+}
+
+body.dark .weather-card {
+    border-color: #334155;
+    background: #1e293b;
+    color: #f5f5f5;
+}
+
+body.dark .weather-heading {
+    color: #bfdbfe;
+}
+
+.hero-label {
+    color: #2563eb;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+.hero-description {
+    max-width: 700px;
+    margin: auto;
+    color: #555;
+}
+
+/* Sections */
+.section {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.section h2 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+}
+
+/* Skills */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+}
+
+.skills-list li {
+    padding: 8px 15px;
+    border-radius: 20px;
+    background-color: #dbeafe;
+    color: #1e40af;
+    font-weight: bold;
+}
+
+/* Projects */
+.projects-list {
+    display: grid;
+    gap: 20px;
+}
+
+.project-card {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.project-card h3 {
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    margin-bottom: 10px;
+}
+
+.project-card a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* Footer */
+.site-footer {
+    text-align: center;
+    padding: 25px 20px;
+    background-color: #1e293b;
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .weather-card {
+        position: static;
+        width: min(100%, 260px);
+        margin: 0 auto 24px;
+    }
+
+    .section {
+        width: 92%;
+        padding: 25px 20px;
+    }
+}
+
+.project-card a:hover {
+    color: red;
+    font-size: 1.15em;
+    text-decoration: underline;
+}
+
+/* Theme colors */
+body {
+    background-color: #ffffff;
+    color: #222222;
+}
+
+/* Dark mode */
+body.dark {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+/* Keep common text elements readable in dark mode */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6,
+body.dark p,
+body.dark li,
+body.dark span,
+body.dark a {
+    color: #f5f5f5;
+}
+
+/* Theme toggle button */
+#theme-toggle {
+    padding: 10px 16px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #222222;
+    cursor: pointer;
+    font: inherit;
+}
+
+body.dark #theme-toggle {
+    background-color: #222222;
+    color: #ffffff;
+    border-color: #555555;
+}
